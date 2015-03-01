@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Person extends Model {
+class Patient extends Model {
 
 	//
 

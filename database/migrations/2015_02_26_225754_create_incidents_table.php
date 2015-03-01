@@ -16,7 +16,7 @@ class CreateIncidentsTable extends Migration {
 		{
 			$table->increments('id');
 			$table->timestamps();
-			$table->integer('users_id')->unsigned();
+			$table->integer('patients_id')->unsigned();
 		});
 	}
 

@@ -14,7 +14,7 @@ class AddForeignKeysToIncidentsTable extends Migration {
 	{
 		Schema::table('incidents', function(Blueprint $table)
 		{
-			$table->foreign('users_id')->references('id')->on('users');
+			$table->foreign('patients_id')->references('id')->on('patients');
 		});
 	}
 
@@ -27,7 +27,7 @@ class AddForeignKeysToIncidentsTable extends Migration {
 	{
 		Schema::table('incidents', function(Blueprint $table)
 		{
-			$table->dropForeign('incidents_users_id_foreign');
+			$table->dropForeign('incidents_patients_id_foreign');
 		});
 	}
 
