@@ -14,8 +14,8 @@ class AddForeignKeysToAuthorizationsTable extends Migration {
 	{
 		Schema::table('authorizations', function(Blueprint $table)
 		{
-			$table->foreign('users_id')->references('id')->on('users');
-			$table->foreign('users_authorized_id')->references('id')->on('users');
+			$table->foreign('patients_id')->references('id')->on('patients');
+			$table->foreign('patients_authorized_id')->references('id')->on('patients');
 		});
 	}
 
@@ -28,8 +28,8 @@ class AddForeignKeysToAuthorizationsTable extends Migration {
 	{
 		Schema::table('authorizations', function(Blueprint $table)
 		{
-			$table->dropForeign('authorizations_users_id_foreign');
-			$table->dropForeign('authorizations_users_authorized_id_foreign');
+			$table->dropForeign('authorizations_patients_id_foreign');
+			$table->dropForeign('authorizations_patients_authorized_id_foreign');
 		});
 	}
 

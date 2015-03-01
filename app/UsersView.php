@@ -1,9 +1,0 @@
-<?php namespace App;
-
-use Illuminate\Database\Eloquent\Model;
-
-class UsersView extends Model {
-
-	protected $table = 'users_view';
-
-}

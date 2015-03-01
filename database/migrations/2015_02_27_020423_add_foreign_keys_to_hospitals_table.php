@@ -14,7 +14,7 @@ class AddForeignKeysToHospitalsTable extends Migration {
 	{
 		Schema::table('hospitals', function(Blueprint $table)
 		{
-			$table->foreign('persons_id')->references('id')->on('persons');
+			$table->foreign('users_id')->references('id')->on('users');
 		});
 	}
 
@@ -27,7 +27,7 @@ class AddForeignKeysToHospitalsTable extends Migration {
 	{
 		Schema::table('hospitals', function(Blueprint $table)
 		{
-			$table->dropForeign('hospitals_persons_id_foreign');
+			$table->dropForeign('hospitals_users_id_foreign');
 		});
 	}
 

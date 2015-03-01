@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddForeignKeysToUsersTable extends Migration {
+class AddForeignKeysToPatientsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,9 +12,9 @@ class AddForeignKeysToUsersTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('users', function(Blueprint $table)
+		Schema::table('patients', function(Blueprint $table)
 		{
-			$table->foreign('persons_id')->references('id')->on('persons');
+			$table->foreign('users_id')->references('id')->on('users');
 			$table->foreign('blood_types_id')->references('id')->on('blood_types');
 		});
 	}
@@ -26,10 +26,10 @@ class AddForeignKeysToUsersTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('users', function(Blueprint $table)
+		Schema::table('patients', function(Blueprint $table)
 		{
-			$table->dropForeign('users_persons_id_foreign');
-			$table->dropForeign('users_blood_types_id_foreign');
+			$table->dropForeign('patients_users_id_foreign');
+			$table->dropForeign('patients_blood_types_id_foreign');
 		});
 	}
 

@@ -19,7 +19,7 @@ class CreateMembersTable extends Migration {
 			$table->boolean('active')->default(1);
 			$table->integer('locations_id')->unsigned();
 			$table->integer('roles_id')->unsigned();
-			$table->integer('persons_id')->unsigned()->unique();
+			$table->integer('users_id')->unsigned()->unique();
 		});
 	}
 

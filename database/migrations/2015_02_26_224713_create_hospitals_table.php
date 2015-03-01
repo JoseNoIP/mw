@@ -20,7 +20,7 @@ class CreateHospitalsTable extends Migration {
 			$table->string('logo')->nullable();
 			$table->string('webpage')->nullable();
 			$table->timestamps();
-			$table->integer('persons_id')->unsigned();
+			$table->integer('users_id')->unsigned();
 		});
 	}
 

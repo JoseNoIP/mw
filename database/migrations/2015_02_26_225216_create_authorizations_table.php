@@ -14,10 +14,10 @@ class CreateAuthorizationsTable extends Migration {
 	{
 		Schema::create('authorizations', function(Blueprint $table)
 		{
-			$table->integer('users_id')->unsigned();
-			$table->integer('users_authorized_id')->unsigned();
+			$table->integer('patients_id')->unsigned();
+			$table->integer('patients_authorized_id')->unsigned();
 			$table->timestamps();
-			$table->primary(['users_id', 'users_authorized_id']);
+			$table->primary(['patients_id', 'patients_authorized_id']);
 		});
 	}
 
