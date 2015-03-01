@@ -31,4 +31,16 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 */
 	protected $hidden = ['password', 'remember_token'];
 
+	public function hospitals(){
+		return $this->hasMany('Mw\Hospital', 'users_id', 'id');
+	}
+
+	public function member(){
+		return $this->hanOne('Mw\Member', 'users_id', 'id');
+	}
+
+	public function patient(){
+		return hasOne('Mw\Patient', 'users_id', 'id');
+	}
+
 }
